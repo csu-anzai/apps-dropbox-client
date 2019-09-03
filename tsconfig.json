@@ -1,8 +1,5 @@
 {
-  "compileOnSave": false,
-  "angularCompilerOptions": {
-    "enableIvy": true
-  },
+  "compileOnSave": false,  
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
@@ -24,3 +21,4 @@
     ]
   }
 }
+
