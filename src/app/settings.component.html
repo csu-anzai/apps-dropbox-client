@@ -1,0 +1,16 @@
+<div *ngIf="user" style="color:#ddd;text-align: center;">
+
+    <div style="margin:auto; padding-top:10px;color:#aaa">Linked to the following account:</div>
+
+    <div style="margin-left:150px;margin-top:50px;">
+        <div style="float: left;margin-right:10px">
+            <img [src]="user.picture" style="width:80px"/>
+        </div>
+        
+        <div style="float: left;margin-left:10px">            
+            <div style="text-align: left;padding-top:2px">{{user.name}}</div> 
+            <div style="text-align: left;padding-top:2px">{{user.email}}</div> 
+        </div>
+        
+    </div>
+</div>
