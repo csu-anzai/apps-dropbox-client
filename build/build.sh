@@ -12,7 +12,7 @@ npm install -g @angular/cli
 if [ "$BRANCH" == "master" ]; then
     APP_ENVIRONMENT=production
 else
-    APP_ENVIRONMENT=staging
+    APP_ENVIRONMENT=staging  
 fi
 
 echo "Builing app..."
@@ -27,5 +27,11 @@ if [ "$APP_ENVIRONMENT" == "production" ]; then
     NG_FLAGS=--prod
 fi
 
+
 ng build --configuration $APP_ENVIRONMENT $NG_FLAGS
 
+cd dist 
+APP_NAME=ls | sort -n | head -1
+cd $APP_NAME
+
+find . -type f -exec sha256sum {} > module.map
