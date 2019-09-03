@@ -1,7 +1,5 @@
 import { Component, NgZone, ViewChild, ElementRef } from '@angular/core';
 import { Router, ActivatedRouteSnapshot } from '@angular/router';
-import { reject } from 'q';
-import { CreateActivation } from './create-activation';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { link } from  '@chase/apps-client-sdk'
 import { AuthorizationRequest } from '@chase/apps-client-sdk/authorization-request';
