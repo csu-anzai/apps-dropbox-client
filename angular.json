@@ -15,8 +15,9 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:browser",          
           "options": {
+            "ssl": true,"baseHref": "/apps/dropbox/",
             "outputPath": "dist/dropbox",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -40,6 +41,7 @@
                   "replace": "src/environments/config.ts",
                 "with": "src/environments/config.staging.ts"
               }],
+              "ssl": true,"baseHref": "/apps/dropbox/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -63,6 +65,7 @@
                   "replace": "src/environments/config.ts",
                 "with": "src/environments/config.production.ts"
               }],
+              "ssl": true,"baseHref": "/apps/dropbox/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
