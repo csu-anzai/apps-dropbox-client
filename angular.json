@@ -15,10 +15,10 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",          
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "ssl": true,"baseHref": "/apps/dropbox/",
-            "outputPath": "dist/dropbox",
+            "baseHref": "/apps/aws/",
+            "outputPath": "dist/aws",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -31,17 +31,16 @@
             ],
             "styles": [
               "src/styles.scss"
-            ],
-    
-          },
+            ]  
+          },  
           "configurations": {
             "staging" : {              
               "fileReplacements": [
                 {
                   "replace": "src/environments/config.ts",
                 "with": "src/environments/config.staging.ts"
-              }],
-              "ssl": true,"baseHref": "/apps/dropbox/",
+              }],              
+              "baseHref": "/apps/aws/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -64,8 +63,8 @@
                 {
                   "replace": "src/environments/config.ts",
                 "with": "src/environments/config.production.ts"
-              }],
-              "ssl": true,"baseHref": "/apps/dropbox/",
+              }],              
+              "baseHref": "/apps/aws/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -88,6 +87,9 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
+            "ssl": true,            
+            "baseHref": "/apps/aws/",
+            "port": 4201,
             "browserTarget": "chase:build"
           },
           "configurations": {
